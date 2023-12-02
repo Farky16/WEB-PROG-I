@@ -1,0 +1,24 @@
+
+section.gym {
+        background-image: url(images/gym.jpg);
+}
+
+p.nej {
+
+    text-align: left;
+    padding-top: 50px;
+}
+
+section.asd2{
+
+    padding-top: 100px;
+    background: url(hatter/gym3.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 80px);
+    box-shadow: 0 0 10px black;
+}
+
+p.null {
+    margin-bottom: 0px;
+    margin-top: 0px;;
+}
