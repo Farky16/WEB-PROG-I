@@ -13,6 +13,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 </head>
 <body>
+    <?php
+    if (isset($_GET['page'])) {
+        $requested_page = $_GET['page'];
+    }
+    else {
+        $requested_page = 'home';
+    }
+
+    switch($requested_page) {
+        case "about":
+            include("/about.html");
+            break;
+            
+        case "araink":
+            include("/Áraink_Eszközeink(1).html");
+            break;
+                
+            case "bejelentkezes":
+                include("/Bejelentkezes.html");
+                break;
+                            
+        case "elerhetoseg":
+            include("/Elérhetőségeink.html");
+            break;
+                        
+        case "home":
+            include("/index.html");
+            break;
+                        
+        case "muveink":
+            include("/Műveink.html");
+            break;
+                        
+        case "szolgaltatas":
+            include("/Szolgáltatásaink.html");
+            break;
+    }
+?>
     <nav class="navigacio">
         <input type="checkbox" id="check">
         <label for="check" class="checkfa">
