@@ -13,44 +13,41 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 </head>
 <body>
-    <?php
-        if (isset($_GET['page'])) {
-            $requested_page = $_GET['page'];
-        }
-        else {
-            $requested_page = 'home';
-        }
+    <div id="tartalom">
+        <?php
+            if (isset($_GET['page'])) {
+                if ($_GET['page']=="index"){
+                    include("index.html")
+                }
 
-        switch($requested_page) {
-            case "about":
-                include("/about.html");
-                break;
-            
-            case "araink":
-                include("/Áraink_Eszközeink(1).html");
-                break;
-                
-                case "bejelentkezes":
-                    include("/Bejelentkezes.html");
-                    break;
-                            
-            case "elerhetoseg":
-                include("/Elérhetőségeink.html");
-                break;
-                        
-            case "home":
-                include("/index.html");
-                break;
-                        
-            case "muveink":
-                include("/Műveink.html");
-                break;
-                        
-            case "szolgaltatas":
-                include("/Szolgáltatásaink.html");
-                break;
-        }
-    ?>
+                else if ($_GET['page']=="about"){
+                    include("about.html")
+                }
+
+                else if ($_GET['page']=="araink"){
+                    include("Áraink_Eszközeink(1).html")
+                }
+
+                else if ($_GET['page']=="bejelentkezes"){
+                    include("Bejelentkezes.html")
+                }
+
+                else if ($_GET['page']=="elerhetoseg"){
+                    include("Elérhetőségeink.html")
+                }
+
+                else if ($_GET['page']=="muvek"){
+                    include("Műveinkű.html")
+                }
+
+                else if ($_GET['page']=="szolgaltatas"){
+                    include("Szolgáltatásaink.html")
+                }
+            }
+
+
+        ?>
+    </div>
     <nav class="navigacio">
         <input type="checkbox" id="check">
         <label for="check" class="checkfa">
