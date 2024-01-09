@@ -13,44 +13,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
 </head>
 <body>
-    <?php
-        if (isset($_GET['page'])) {
-            $requested_page = $_GET['page'];
-        }
-        else {
-            $requested_page = 'home';
-        }
-
-        switch($requested_page) {
-            case "about":
-                include("/about.html");
-                break;
-            
-            case "araink":
-                include("/Áraink_Eszközeink(1).html");
-                break;
-                
-                case "bejelentkezes":
-                    include("/Bejelentkezes.html");
-                    break;
-                            
-            case "elerhetoseg":
-                include("/Elérhetőségeink.html");
-                break;
-                        
-            case "home":
-                include("/index.html");
-                break;
-                        
-            case "muveink":
-                include("/Műveink.html");
-                break;
-                        
-            case "szolgaltatas":
-                include("/Szolgáltatásaink.html");
-                break;
-        }
-    ?>
     <nav class="navigacio">
         <input type="checkbox" id="check">
         <label for="check" class="checkfa">
@@ -59,12 +21,12 @@
         
         <label class="logo">GGN</label>
         <ul class="unorderedList">
-            <li class="lista"><a class="active" href="index.html" target="_self">Főoldal</a></li>
+            <li class="lista"><a class="active" href="index.php?oldal=fooldal" target="_self">Főoldal</a></li>
             <li class="lista"><a href="#korites" target="_self">Rólunk</a></li>
-            <li class="lista"><a href="Szolgáltatásaink.html" target="_self">Szolgáltatások</a></li>
-            <li class="lista"><a href="Elérhetőségeink.html" target="_self">Elérhetőség</a></li>
-            <li class="lista"><a href="Műveink.html" target="_self">Termékek</a></li>
-            <li class="lista"><a href="Bejelentkezes.html" target="_self">Bejelentkezés</a></li>
+            <li class="lista"><a href="index.php?oldal=szolgaltatas" target="_self">Szolgáltatások</a></li>
+            <li class="lista"><a href="index.php?oldal=elerhetoseg" target="_self">Elérhetőség</a></li>
+            <li class="lista"><a href="index.php?oldal=muveink" target="_self">Termékek</a></li>
+            <li class="lista"><a href="index.php?oldal=bejelentkezes" target="_self">Bejelentkezés</a></li>
         </ul>
     </nav>
     <section class="asd">
